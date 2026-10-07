@@ -189,13 +189,12 @@
 
       var val = function (n) { return String(form.elements[n].value || "").trim(); };
       var payload = {
-        email: val("email").toLowerCase(),
         name: val("name"),
+        email: val("email").toLowerCase(),
         organization: val("organization"),
-        role: "contact-form",
-        size: "not-asked",
-        firstUse: val("message"),
+        message: val("message"),
         consent: true,
+        lang: lang,
         website: val("website")
       };
 
@@ -224,7 +223,7 @@
         if (res.status === 400) {
           return res.json().catch(function () { return {}; }).then(function (body) {
             var field = body && body.field;
-            var map = { firstUse: "message", name: "name", email: "email", organization: "organization", consent: "consent" };
+            var map = { message: "message", name: "name", email: "email", organization: "organization", consent: "consent" };
             if (field && map[field]) {
               setError(map[field], map[field]);
               setStatus("fix", "error");

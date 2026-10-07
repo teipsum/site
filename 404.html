@@ -34,7 +34,7 @@
       <h2 id="contact-title" class="contact__title" data-i18n="title">Contact us</h2>
       <p class="contact__lede" data-i18n="lede">Leave a note and we will write back.</p>
 
-      <form id="contact" class="form" novalidate data-endpoint="https://9bd54ga6j6.execute-api.us-east-1.amazonaws.com/waitlist">
+      <form id="contact" class="form" novalidate data-endpoint="https://9bd54ga6j6.execute-api.us-east-1.amazonaws.com/contact">
         <div class="field">
           <label for="f-name" data-i18n="name">Name</label>
           <input id="f-name" name="name" type="text" autocomplete="name" maxlength="120" required aria-describedby="e-name">
@@ -52,8 +52,8 @@
         </div>
         <div class="field">
           <label for="f-message" data-i18n="message">Message</label>
-          <textarea id="f-message" name="message" rows="4" maxlength="280" required aria-describedby="c-message e-message"></textarea>
-          <p class="field__hint" id="c-message"><span data-count>0</span> / 280</p>
+          <textarea id="f-message" name="message" rows="5" maxlength="2000" required aria-describedby="c-message e-message"></textarea>
+          <p class="field__hint" id="c-message"><span data-count>0</span> / 2000</p>
           <p class="field__error" id="e-message" hidden></p>
         </div>
 

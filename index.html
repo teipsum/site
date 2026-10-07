@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teipsum</title>
+<meta name="description" content="Coming soon.">
+<meta name="robots" content="noarchive">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src https://9bd54ga6j6.execute-api.us-east-1.amazonaws.com; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#151413">
+<meta property="og:title" content="Teipsum">
+<meta property="og:description" content="Coming soon.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/dm-serif-display-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <a class="mark" href="/" translate="no">Teipsum</a>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button>
+      <button type="button" data-lang="es" aria-pressed="false" lang="es">ES</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="headline" data-i18n="headline">Coming soon.</h1>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="contact__title" data-i18n="title">Contact us</h2>
+      <p class="contact__lede" data-i18n="lede">Leave a note and we will write back.</p>
+
+      <form id="contact" class="form" novalidate data-endpoint="https://9bd54ga6j6.execute-api.us-east-1.amazonaws.com/waitlist">
+        <div class="field">
+          <label for="f-name" data-i18n="name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" maxlength="120" required aria-describedby="e-name">
+          <p class="field__error" id="e-name" hidden></p>
+        </div>
+        <div class="field">
+          <label for="f-email" data-i18n="email">Work email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="e-email">
+          <p class="field__error" id="e-email" hidden></p>
+        </div>
+        <div class="field">
+          <label for="f-organization" data-i18n="organization">Organization</label>
+          <input id="f-organization" name="organization" type="text" autocomplete="organization" maxlength="160" required aria-describedby="e-organization">
+          <p class="field__error" id="e-organization" hidden></p>
+        </div>
+        <div class="field">
+          <label for="f-message" data-i18n="message">Message</label>
+          <textarea id="f-message" name="message" rows="4" maxlength="280" required aria-describedby="c-message e-message"></textarea>
+          <p class="field__hint" id="c-message"><span data-count>0</span> / 280</p>
+          <p class="field__error" id="e-message" hidden></p>
+        </div>
+
+        <div class="trap" aria-hidden="true">
+          <label for="f-website">Website</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="consent">
+          <input id="f-consent" name="consent" type="checkbox" value="true" required aria-describedby="p-consent e-consent">
+          <label for="f-consent" data-i18n="consent">Teipsum may keep these details to reply to me.</label>
+        </div>
+        <p class="consent__note" id="p-consent" data-i18n="privacy">We use them only to answer you. Ask us to delete them at any time, in your message or in a reply.</p>
+        <p class="field__error" id="e-consent" hidden></p>
+
+        <div class="actions">
+          <button class="send" type="submit" data-i18n="send">Send message</button>
+          <p class="status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="thanks" hidden tabindex="-1">
+        <p class="thanks__title" data-i18n="thanksTitle">Thank you.</p>
+        <p data-i18n="thanksBody">Your message reached us. We will reply by email.</p>
+      </div>
+
+      <noscript><p class="status" data-i18n="noscript">This form needs JavaScript to send.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <small>&copy; 2026 Teipsum, Inc.</small>
+  </footer>
+</div>
+</body>
+</html>
